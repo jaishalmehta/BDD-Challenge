@@ -1,0 +1,24 @@
+Scenario:
+As a customer,
+I want to login to the website
+So that my details are saved on the account
+
+Given: A user is on the login page
+When: the user types in the correct account credentials
+Then: They should be taken to the account profile screen
+
+Given: A user is on the login page
+When: the user types in the incorrect account credentials
+Then: an error message should appear to say that the wrong credentials have been entered
+
+Given: A user is on the login page
+When: the user enters a username not currently in the database
+Then: an error message should appear to say that the user it not found
+
+Given: A user is on the login page 
+When: the user registers with a username already in the database
+Then: an error message should appear to say that the username is already taken
+
+Given: A user is on the login page 
+When: the user types in the incorrect account credentials 3 times
+Then: an error message should appear to say that their account has been locked and to reset their password
